@@ -1,5 +1,7 @@
 # 📸 How to Set Up Image, Video, and Webcam using OpenCV
-import cv2  
+import cv2 
+import os
+import numpy as np 
 
 # 1️⃣ Read (Input) an Image 🖼️
 image_path = "C:\\Users\\DELL\\Documents\\Pramila khopade\\code project\\python\\opencv\\learn\\asset\\person.png"
@@ -40,8 +42,8 @@ webcam = cv2.VideoCapture(0)
 # Show live webcam feed
 while True:
     rate, frame = webcam.read()  # Read frames from webcam
+ 
     cv2.imshow('webcam', frame)  # Display webcam feed
-
     # Press 'q' to exit
     if cv2.waitKey(4) & 0xFF == ord('q'):
         break
